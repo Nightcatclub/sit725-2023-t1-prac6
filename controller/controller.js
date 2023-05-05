@@ -26,7 +26,7 @@ const getAllmonkeys = (req, res) => {
 const deletemonkey = (req, res) => {
   //this will delete monkey
   let monkey = req.body;
-  model.remove(monkey, (error, result) => {
+  model.remove(monkey, (err, result) => {
     if (err) {
       res.json({ statusCode: 400, message: err });
     } else {

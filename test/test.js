@@ -50,6 +50,7 @@ describe("test Delete monkeys", function () {
     request.delete(
       { url: url, form: monkey },
       function (error, response, body) {
+        console.log(body);
         body = JSON.parse(body);
         expect(body.message).to.contain("Sucessfully removed");
         done();
